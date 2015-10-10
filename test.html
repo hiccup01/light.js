@@ -1,0 +1,16 @@
+<head>
+</head
+<body>
+<script>
+    function display(url) {
+        var iframe = document.getElementById(ifm);
+        iframe.src = url;
+    } 
+</script>
+</head>
+<form onSubmit="dislplay(document.getElementById("urlbar").value)">
+    <input id="urlbar" type="text" value="www.google.com">
+    <button type='button'>Go</button>
+</form>
+<iframe id="ifm" width="750" height="750" name="content" src="www.google.com"></iframe>
+</body>
