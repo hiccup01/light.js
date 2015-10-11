@@ -3,16 +3,17 @@
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<title>light.js</title>
 	<script type="text/javascript">
-		function display (url) {
-			var display = findElementById(ifm);
-			display.src = url;
-		}
-	</script>
+		$(document).ready(function() {
+			$("#go").click(function() {
+				var url = $("#urlbar").val();
+				$("#go").attr("src", url);
+			});
+		}};
 </head>
 <body>
 	<form id="search" onsumbit="return display(findElementByID(urlbar);)" >
 		<input id="urlbar" type="text" name="urlbar">
-		<input type="button" value="Go">
+		<input id="go" type="button" value="Go">
 	</form>
 	<iframe id="ifm" src="google.co.nz"></iframe>
 </body>
